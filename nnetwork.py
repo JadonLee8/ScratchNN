@@ -37,7 +37,7 @@ class network:
             self.nodes.append([])
             for j in range(0, layers[i]):
                 # could replace first param with the layer number and can access the layer with self.nodes[i] later
-                self.nodes[i].append(Sigmoids.sigmoid(self.nodes[i-1], self.weights[i][j], self.biases[i][j]))
+                self.nodes[i].append(Sigmoids.sigmoid(self.nodes[i-1], self.weights[i - 1][j], self.biases[i - 1][j]))
 
 
     # precondition: inputs is an array of inputs whose length is the number of inputs
